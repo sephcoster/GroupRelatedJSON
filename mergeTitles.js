@@ -17,14 +17,14 @@ var combined = { };
 _.forEach(data, function(n, key) {
   var parent = n[config.parentField];
   if( typeof combined[parent] === 'undefined' ){
-    combined[title] = {};
-    config.otherParentFields.reduce(function(prev,cur, n, array){
-      combined[cur] = n[cur];
+    combined[parent] = {};
+    config.otherParentFields.forEach(function(el, index){
+      combined[parent][el] = n[el];
     });
-    combined.related = [];
+    combined[parent].related = [];
   }
   
-  combined[title].related.push( n['Lay Title'] );
+  combined[parent].related.push( n[config.relatedField] );
 });
 
 fs.writeFile("mergedCompleted.js", JSON.stringify(combined), function(err) {
