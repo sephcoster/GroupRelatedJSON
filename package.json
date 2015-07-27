@@ -1,7 +1,7 @@
 {
-  "name": "MergeRelatedJSON",
+  "name": "GroupRelatedJSON",
   "version": "0.0.0",
-  "description": "MergeRelatedJSON is a simple Node.js project geared toward taking individual line item JSON objects from (hypothetically) sub-optimally formatted public data set output such as Lay Title information from [O*NET](http://www.onetcenter.org/developers.html) and merges the data together based on top-level related objects.",
+  "description": "GroupRelatedJSON is a simple Node.js project geared toward taking individual line item JSON objects from (hypothetically) sub-optimally formatted public data set output such as Lay Title information from [O*NET](http://www.onetcenter.org/developers.html) and merges the data together based on top-level related objects.",
   "main": "mergeTitles.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
